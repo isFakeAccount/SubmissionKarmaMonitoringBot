@@ -5,7 +5,7 @@ import traceback
 import praw
 import prawcore
 
-reddit = praw.Reddit("bot")
+reddit = praw.Reddit("bot", user_agent="SubmissionKarmaMonitoringBot by (u/is_fake_Account)")
 subreddit = reddit.subreddit("subredditname")  # put subreddit name here
 
 submission_stream = subreddit.stream.submissions(pause_after=-1, skip_existing=True)
