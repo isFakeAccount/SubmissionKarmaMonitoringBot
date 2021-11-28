@@ -19,6 +19,7 @@ submission_list = []
 
 # Set the checking interval for upvote using this variable (1 hour is 3600 seconds)
 watch_submission_until = 3600
+watch_flair = "Shitpost"
 
 
 # After every 5 minutes the bot will check the submission list
@@ -47,9 +48,10 @@ while bot_running:
         for submission in submission_stream:
             if submission is None:
                 break
-            # Adds every incomming submission to the submission list where it will stay for an hour
+            # Adds every incoming submission to the submission list where it will stay for an hour
             # After an hour the both will decide whether to remove the submission or leave it as it is
-            submission_list.append(submission)
+            if submission.link_flair_text == watch_flair:
+                submission_list.append(submission)
             failed_attempt = 1
     except KeyboardInterrupt:
         # Stop the bot in elegant way
