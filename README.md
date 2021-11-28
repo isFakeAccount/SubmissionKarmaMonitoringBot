@@ -32,7 +32,7 @@ client_secret=revokedoqsMk5nHCJTHLrwgvHpr
 password=invalidht4wd50gk
 username=fakebot1
 ```
-See the included template file (`template_praw.ini`), you may edit the file and rename it to `praw.ini` and use it instead.
+See the included template file (`template_praw.ini`), you may edit the file and rename it to `praw.ini`, and use it instead of creating file from scratch.
 
 **Configuring the subreddit:**
 
